@@ -32,3 +32,17 @@ Original prompt: Make this game more fun and easy to use
 - Optional: add persistence for best score / best star rating across sessions (e.g., `localStorage`).
 - Optional: add an automated CI script that runs the custom blocked-attempt assertion alongside the shared web-game client.
 - Added `.gitignore` rule for temporary local action payloads (`output_actions_*.json`) used during Playwright scenario setup.
+
+## 2026-02-25 - Controls Copy Polish
+- Replaced raw keycode labels in UI copy with arrow symbols:
+  - Start Briefing: `ArrowLeft`/`ArrowRight` -> `←`/`→`
+  - Controls recap: `ArrowLeft/B and ArrowRight` -> `←/B and →`
+- Confirmed keyboard logic remained unchanged (`event.code` checks still use `ArrowLeft`, `ArrowRight`, `KeyB`).
+- Ran `npm run build` successfully after change.
+- Ran Playwright client artifact captures:
+  - `output/web-game-start-copy/shot-0.png` + `state-0.json` (start screen copy check)
+  - `output/web-game-arrow-check/shot-0.png` + `state-0.json` (shortcut flow sanity check)
+- Ran focused Playwright DOM/key assertion:
+  - Verified start copy includes `← or B` and `→`
+  - Verified controls recap includes `←/B and →`
+  - Verified Enter + ArrowLeft + ArrowRight + B returns route to `/lobby` with 4 steps and no failures

@@ -697,8 +697,8 @@ export default function HistoryHeist() {
             </p>
 
             <ul className="mt-4 grid gap-2 text-sm text-slate-700 sm:grid-cols-2">
-              <li>• ArrowLeft or B: Back in history</li>
-              <li>• ArrowRight: Forward in history</li>
+              <li>• ← or B: Back in history</li>
+              <li>• →: Forward in history</li>
               <li>• Enter: Run recommended action</li>
               <li>• Space: Toggle detailed hint</li>
               <li>• A: New run (return to briefing)</li>
@@ -895,7 +895,7 @@ export default function HistoryHeist() {
                 <h3 className="font-semibold text-slate-900">Controls recap</h3>
                 <ul className="mt-2 space-y-1">
                   <li>• Browser Back/Forward: core time machine</li>
-                  <li>• ArrowLeft/B and ArrowRight: in-game shortcut keys</li>
+                  <li>• ←/B and →: in-game shortcut keys</li>
                   <li>• Enter: run recommended action</li>
                   <li>• A: reset to briefing</li>
                 </ul>

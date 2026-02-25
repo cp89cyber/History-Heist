@@ -1,0 +1,5 @@
+node_modules/
+dist/
+output/
+output_actions_*.json
+.DS_Store
